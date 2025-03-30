@@ -1,0 +1,64 @@
+/* Estilos generales de la barra de navegación */
+.navbar {
+    background: #1e1e1e;
+    padding: 15px 20px;
+    display: flex; /* Asegura que sea flex */
+    justify-content: center; /* Centra el contenido */
+    align-items: center; /* Alinea verticalmente */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+  }
+  
+  /* Contenedor principal */
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+
+  }
+  
+  /* Estilo del logo */
+  .navbar-container a img {
+    height: 60px;
+    width: auto;
+  }
+
+  
+
+  /* Estilos del menú */
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+
+  }
+  
+  /* Estilos de los enlaces */
+  .nav-menu li {
+    display: flex;
+
+  }
+  
+  .nav-menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 8px 12px;
+    transition: color 0.3s ease-in-out;
+
+  }
+  
+  /* Efecto hover */
+  .nav-menu a:hover {
+    color: #f39c12;
+
+  }
+  
