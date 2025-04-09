@@ -1,26 +1,32 @@
-/* Secciones */
-.section {
-    height: 100vh; /* Ocupará toda la pantalla */
-    padding: 100px 20px;
-  }
-  
-  #inicio {
-    background-color: #111;
-  }
-  
-  #servicios {
-    background-color: #333;
-  }
-  
-  #proyectos {
-    background-color: #555;
-  }
-  
-  #nosotros {
-    background-color: #777;
-  }
-  
-  #contacto {
-    background-color: #999;
-  }
-  
+/* Sección de imágenes futuras (cuadros) */
+.image-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 60px 20px 40px;
+  background-color: #fff;
+  width: 100%;
+}
+
+.image-box {
+  background-color: #f9fafb;
+  border: 2px dashed #ccc;
+  border-radius: 12px;
+  width: 280px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.image-box:hover {
+  border-color: #ff7f11;
+}
+
+.image-box p {
+  color: #666;
+  font-size: 16px;
+  text-align: center;
+}

@@ -1,15 +1,19 @@
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
-import "../styles/Navbar.css"; // Importamos el CSS
+import "../styles/Navbar.css";
 
 const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        {/* Logo con mejor presentación */}
-        <Link to="/" className="navbar-logo" aria-label="Inicio">
-          <img src={logo} alt="Mouse Tech" className="logo" />
-        </Link>
+
+        {/* Logo y nombre */}
+        <div className="logo-area">
+          <Link to="/" className="navbar-logo" aria-label="Inicio">
+            <img src={logo} alt="Mouse Tech Logo" className="logo" />
+            <span className="brand-name">MOUSE TECH S.A.</span>
+          </Link>
+        </div>
 
         {/* Menú de navegación */}
         <ul className="nav-menu">

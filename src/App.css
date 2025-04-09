@@ -1,9 +1,24 @@
-#root {
+/*#root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+}*/
+#root {
+  width: 100%; /* Cambiado a 100% para que el contenedor ocupe todo el ancho */
+  padding: 2rem;
+  text-align: center;
+  box-sizing: border-box; /* Esto ayuda a evitar que el padding cause problemas de diseño */
 }
+
+/* Solo en pantallas grandes */
+@media (min-width: 1280px) {
+  #root {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+}
+
 
 .logo {
   height: 6em;

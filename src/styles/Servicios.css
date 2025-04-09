@@ -1,0 +1,84 @@
+/* Estilos Generales */
+.servicios-container {
+    padding: 80px 40px; /* Más espacio arriba para que no choque con el encabezado */
+    max-width: 1200px;
+    margin: auto;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  /* Sección de introducción */
+  .servicios-intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    background: linear-gradient(135deg, #1a1a2e, #16213e); /* Fondo con gradiente atractivo */
+    padding: 50px;
+    border-radius: 15px;
+    color: white;
+  }
+  
+  /* Texto de Servicios */
+  .servicios-texto {
+    max-width: 50%;
+  }
+  
+  .servicios-texto h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .servicios-texto p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+  
+  /* Botón de Servicio */
+  .boton-servicio {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 24px;
+    background-color: #ff5733;
+    color: white;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(255, 87, 51, 0.5);
+  }
+  
+  .boton-servicio:hover {
+    background-color: #c70039;
+    box-shadow: 0px 6px 15px rgba(199, 0, 57, 0.5);
+  }
+  
+  /* Imagen */
+  .servicios-imagen img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Sección de Proyectos a Futuro */
+  .proyectos-futuros {
+    margin-top: 60px;
+    padding: 40px;
+    background: #f7f7f7;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .proyectos-futuros h2 {
+    font-size: 2.2rem;
+    color: #444;
+  }
+  
+  .proyectos-futuros p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 10px;
+  }
+  
