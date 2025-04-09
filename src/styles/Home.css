@@ -1,102 +1,252 @@
-/* RESET DE ESTILOS GENERALES */
+/* ESTILOS GENERALES */
 body {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f7f7f7;
+  background-color: #f9f9f9;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.home {
+  margin-top: 80px; /* Evita que el contenido se solape con el encabezado */
+  padding: 60px 10%;
+  text-align: center;
 }
 
 /* SECCIÓN HERO */
 .hero {
-  background: linear-gradient(135deg, #0066cc, #00aaff);  /* Colores más vibrantes */
-  color: white;
-  padding: 100px 20px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #eaf6ff;
+  padding: 60px 10%;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  gap: 40px;
+}
+
+.hero-content {
+  flex: 1;
+  text-align: left;
 }
 
 .hero-content h1 {
-  font-size: 48px;
+  font-size: 40px;
+  color: #002b5b;
   margin-bottom: 20px;
-  color: #ffffff;
 }
 
 .hero-content p {
   font-size: 18px;
+  color: #333;
   margin-bottom: 30px;
-  color: #e6e6e6;
+  max-width: 500px;
 }
 
-.btn-servicios {
-  background-color: #ffffff;
-  color: #0066cc;
-  padding: 12px 24px;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 8px;
-  transition: 0.3s ease;
-  border: 2px solid #0066cc;
-}
-
-.btn-servicios:hover {
-  background-color: #e6e6e6;
-}
-
-/* MISIÓN Y VISIÓN */
-.mision-vision {
+.hero-image {
+  flex: 1;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/*.hero-image img {
+  max-width: 300px;
+  height: auto;
+  object-fit: contain;
+}*/
+.hero-image img {
+  width: 60%;
+  max-width: 350px;
+  height: auto;
+  object-fit: contain;
+}
+
+
+/* BOTÓN MEJORADO */
+.boton-servicios {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 18px;
+  color: white;
+  background: linear-gradient(135deg, #252470, #5f4c80);
+
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+/*MISION Y VISION*/
+/* SECCIÓN MISIÓN Y VISIÓN */
+.mision-vision {
+  padding: 80px 10%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   gap: 40px;
-  padding: 60px 20px;
-  background-color: #f1f8ff;  /* Azul claro */
   flex-wrap: wrap;
 }
 
-.card {
-  background: white;
-  padding: 30px;
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
+.mision-vision .mision,
+.mision-vision .vision {
   flex: 1;
-  min-width: 280px;
-  transition: all 0.3s ease;
+  min-width: 300px;
+  background: #f0f8ff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-.card h2 {
-  color: #003366;  /* Color oscuro para los títulos */
+.mision-vision h2 {
+  font-size: 28px;
+  color: #002b5b;
+  margin-bottom: 15px;
+  text-transform: uppercase;
 }
 
-.card:hover {
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);  /* Mejorar el hover para darle más énfasis */
-  transform: translateY(-10px); /* Agregar movimiento sutil */
+.mision-vision p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  text-align: justify;
 }
 
-/* SERVICIOS */
-.servicios {
-  padding: 60px 20px;
-  text-align: center;
-  background-color: #f4f9ff;  /* Color más suave para esta sección */
-}
-
-.servicios h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-  color: #0066cc;
-}
-
-.servicios p {
-  font-size: 18px;
-  color: #555;
-}
-
-/* AGREGANDO ALINEACIÓN PARA OTRA SECCIÓN */
 @media (max-width: 768px) {
   .mision-vision {
     flex-direction: column;
-    align-items: center;
+    padding: 60px 5%;
   }
-  .card {
-    margin-bottom: 20px;
+}
+
+
+.boton-servicios:hover {
+  background: linear-gradient(135deg, #005b99, #0088cc);
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* SECCIÓN: ¿POR QUÉ ELEGIR MOUSE TECH? */
+.por-que-elegir {
+  background-color: #ffffff;
+  padding: 80px 10%;
+}
+
+.por-que-elegir h2 {
+  font-size: 36px;
+  color: #002b5b;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.razones-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+.razon {
+  background: #002b5b;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.razon h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.razon p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.razon:hover {
+  background: linear-gradient(135deg, #322197, #054a5f, #1f85a4 );
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
+/* SECCIÓN: METODOLOGÍA DE TRABAJO */
+.metodologia {
+  background-color: #f4f9ff;
+  padding: 80px 10%;
+}
+
+.metodologia h2 {
+  font-size: 36px;
+  color: #002b5b;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.pasos {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.paso {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  transition: all 0.3s ease;
+}
+
+.paso h3 {
+  color: #0088cc;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.paso p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.paso:hover {
+  transform: translateY(-5px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .home {
+    padding: 40px 5%;
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .hero-image {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  .por-que-elegir,
+  .metodologia {
+    padding: 60px 5%;
+  }
+
+  .razones-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pasos {
+    flex-direction: column;
+    align-items: center;
   }
 }

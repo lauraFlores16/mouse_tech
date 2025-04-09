@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Servicios from "./pages/Servicios";
 import Proyectos from "./pages/Proyectos";
@@ -17,6 +18,7 @@ function App() {
         <Route path="/nosotros" element={<Nosotros />} />
         <Route path="/contacto" element={<Contacto />} />
       </Routes>
+      <Footer /> 
     </>
   );
 }

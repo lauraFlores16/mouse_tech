@@ -1,0 +1,69 @@
+.nosotros-page {
+    padding: 80px 10%;
+    background-color: #ffffff;
+    text-align: center;
+  }
+  
+  .nosotros-page h1 {
+    font-size: 36px;
+    color: #002b5b;
+    margin-bottom: 10px;
+  }
+  
+  .nosotros-page .intro {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .equipo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+    justify-content: center;
+  }
+  
+  .miembro {
+    background: linear-gradient(135deg, #819ed2, #aec4dc);
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .miembro img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px; /* esquinas ligeramente redondeadas */
+    margin-bottom: 10px;
+    border: none; /* elimina el borde azul */
+  }
+  
+  
+  .miembro h3 {
+    font-size: 20px;
+    color: #000000;
+    margin-bottom: 10px;
+  }
+  
+  .miembro p {
+    font-size: 16px;
+    color: #000000;
+    line-height: 1.5;
+  }
+  
+  .miembro:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(135deg, #47556f, #98afc8);
+  }
+  
+  @media (max-width: 768px) {
+    .nosotros-page {
+      padding: 60px 5%;
+    }
+  }
+  

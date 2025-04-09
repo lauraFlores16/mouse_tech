@@ -8,7 +8,7 @@ const Servicios = () => {
       {/* Sección de presentación */}
       <section className="servicios-intro">
         <div className="servicios-texto">
-          <h1>🚀 Nuestros Servicios</h1>
+          <h1>ALISPORT</h1>
           <p>
             En <strong>Alis Sport</strong> ofrecemos una plataforma innovadora para la personalización de ropa deportiva. 
             Diseña tu equipación con las mejores herramientas y crea un estilo único para tu equipo.
@@ -19,7 +19,7 @@ const Servicios = () => {
             rel="noopener noreferrer"
             className="boton-servicio"
           >
-            🎨 Diseña tu ropa deportiva
+            VISITA ALISPORT
           </a>
         </div>
         <div className="servicios-imagen">
@@ -29,7 +29,7 @@ const Servicios = () => {
 
       {/* Sección de proyectos a futuro */}
       <section className="proyectos-futuros">
-        <h2>🌟 Proyectos a Futuro</h2>
+        <h2> Proyectos a Futuro</h2>
         <p>
           Expansión a más deportes, nuevas tecnologías en personalización y experiencias inmersivas en 3D. 
           Nuestro objetivo es ofrecerte lo mejor en diseño deportivo digital.

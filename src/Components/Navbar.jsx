@@ -19,7 +19,6 @@ const Navbar = () => {
         <ul className="nav-menu">
           <li><Link to="/" className="nav-link">Inicio</Link></li>
           <li><Link to="/servicios" className="nav-link">Servicios</Link></li>
-          <li><Link to="/proyectos" className="nav-link">Proyectos</Link></li>
           <li><Link to="/nosotros" className="nav-link">Nosotros</Link></li>
           <li><Link to="/contacto" className="nav-link">Contacto</Link></li>
         </ul>

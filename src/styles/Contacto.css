@@ -1,0 +1,97 @@
+.contacto-page {
+    padding: 80px 10%;
+    background-color: #f4f9ff;
+    text-align: center;
+  }
+  
+  .contacto-page h1 {
+    font-size: 36px;
+    color: #002b5b;
+    margin-bottom: 10px;
+  }
+  
+  .contacto-page p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 40px;
+  }
+  
+  .contacto-contenido {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+    text-align: left;
+  }
+  
+  .info-contacto {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .info-contacto h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #0088cc;
+  }
+  
+  .info-contacto p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .formulario-contacto {
+    flex: 1;
+    min-width: 300px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .formulario-contacto h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #0088cc;
+  }
+  
+  .formulario-contacto input,
+  .formulario-contacto textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    resize: none;
+  }
+  
+  .formulario-contacto button {
+    background: linear-gradient(135deg, #0088cc, #00c6ff);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .formulario-contacto button:hover {
+    background: linear-gradient(135deg, #005b99, #0088cc);
+    transform: scale(1.05);
+  }
+  
+  @media (max-width: 768px) {
+    .contacto-contenido {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .info-contacto,
+    .formulario-contacto {
+      width: 100%;
+    }
+  }
+  
