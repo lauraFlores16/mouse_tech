@@ -20,13 +20,13 @@ const Nosotros = () => {
         <div className="miembro">
           <img src="/assets/lau.png" alt="Laura" />
           <h3>Laura Flores</h3>
-          <p>CTO & Especialista en Sistemas. Encargado de la arquitectura técnica y rendimiento de nuestras plataformas.</p>
+          <p>CTO & Especialista en Sistemas. Encargada de la arquitectura técnica y rendimiento de nuestras plataformas.</p>
         </div>
 
         <div className="miembro">
           <img src="/imagenes/eric.png" alt="Eric" />
           <h3>Eric Apaza</h3>
-          <p>Diseñadora UX/UI. Apasionada por crear experiencias visuales intuitivas, atractivas y funcionales.</p>
+          <p>Diseñadora UX/UI. Apasionado por crear experiencias visuales intuitivas, atractivas y funcionales.</p>
         </div>
 
         <div className="miembro">
