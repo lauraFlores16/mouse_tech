@@ -132,7 +132,14 @@ body {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
+.mision-vision .mision:hover,
+.mision-vision .vision:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
 
 /* Fondo para MISIÓN */
 .mision-vision .mision::before {
