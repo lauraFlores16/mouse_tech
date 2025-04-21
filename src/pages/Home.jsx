@@ -1,8 +1,55 @@
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 import "../styles/Home.css";
 import logo from "../assets/logo.png";
 
 const Home = () => {
+  // Estado para manejar la razón activa
+  const [razonActiva, setRazonActiva] = useState(2); // Comenzamos con Innovación Tecnológica seleccionada (índice 2)
+
+  // Datos para las razones
+  const razones = [
+    {
+      id: 0,
+      titulo: "Desarrollo a Medida",
+      descripcion: "Diseñamos soluciones personalizadas que se adaptan a tu negocio.",
+      clase: "desarrollo"
+    },
+    {
+      id: 1,
+      titulo: "Entrega Rápida",
+      descripcion: "Tu proyecto estará listo en el menor tiempo posible sin perder calidad.",
+      clase: "entrega"
+    },
+    {
+      id: 2,
+      titulo: "Innovación Tecnológica",
+      descripcion: "Utilizamos las últimas tecnologías para crear plataformas seguras y escalables.",
+      clase: "innovacion"
+    },
+    {
+      id: 3,
+      titulo: "Soporte Continuo",
+      descripcion: "Te acompañamos después del lanzamiento con mantenimiento y mejoras.",
+      clase: "soporte"
+    },
+    {
+      id: 4,
+      titulo: "Experiencia Comprobada",
+      descripcion: "Hemos trabajado con diversos sectores optimizando procesos digitales.",
+      clase: "experiencia"
+    }
+  ];
+
+  // Cambiar automáticamente cada 5 segundos (opcional)
+  useEffect(() => {
+    const intervalo = setInterval(() => {
+      setRazonActiva(prev => (prev + 1) % razones.length);
+    }, 6000);
+    
+    return () => clearInterval(intervalo);
+  }, [razones.length]);
+
   return (
     <div className="home">
       {/* SECCIÓN HERO */}
@@ -35,29 +82,36 @@ const Home = () => {
         </div>
       </section>
 
-      {/* SECCIÓN ¿POR QUÉ ELEGIR MOUSE TECH? */}
+      {/* SECCIÓN ¿POR QUÉ ELEGIR MOUSE TECH? - VERSIÓN INTERACTIVA */}
       <section className="por-que-elegir">
         <h2>¿Por qué elegir Mouse Tech?</h2>
-        <div className="razones-grid">
-          <div className="razon">
-            <h3>Desarrollo a Medida</h3>
-            <p>Diseñamos soluciones personalizadas que se adaptan a tu negocio.</p>
+        <div className="razones-contenedor">
+          {/* Panel de menú izquierdo */}
+          <div className="razones-menu">
+            {razones.map((razon, index) => (
+              <div 
+                key={razon.id}
+                className={`razon-opcion ${razonActiva === index ? 'activa' : ''}`}
+                onClick={() => setRazonActiva(index)}
+              >
+                <div className="icono">{index + 1}</div>
+                <h3>{razon.titulo}</h3>
+              </div>
+            ))}
           </div>
-          <div className="razon">
-            <h3>Entrega Rápida</h3>
-            <p>Tu proyecto estará listo en el menor tiempo posible sin perder calidad.</p>
-          </div>
-          <div className="razon especial">
-            <h3>Innovación Tecnológica</h3>
-            <p>Utilizamos las últimas tecnologías para crear plataformas seguras y escalables.</p>
-          </div>
-          <div className="razon">
-            <h3>Soporte Continuo</h3>
-            <p>Te acompañamos después del lanzamiento con mantenimiento y mejoras.</p>
-          </div>
-          <div className="razon">
-            <h3>Experiencia Comprobada</h3>
-            <p>Hemos trabajado con diversos sectores optimizando procesos digitales.</p>
+          
+          {/* Panel de contenido derecho */}
+          <div className="razones-contenido">
+            {razones.map((razon, index) => (
+              <div 
+                key={razon.id}
+                className={`razon-detalle ${razonActiva === index ? 'activo' : ''}`}
+              >
+                <h4>{razon.titulo}</h4>
+                <p>{razon.descripcion}</p>
+                <div className={`razon-imagen ${razon.clase}`}></div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -65,21 +119,21 @@ const Home = () => {
       {/* SECCIÓN METODOLOGÍA DE TRABAJO */}
       <section className="metodologia">
         <h2>Nuestra Metodología de Trabajo</h2>
-        <div className="pasos">
-          <div className="paso">
-            <h3>1. Análisis de Requisitos</h3>
+        <div className="puzzle-container">
+          <div className="puzzle-piece top-left">
+            <h3>1. Análisis de requisitos</h3>
             <p>Evaluamos tus necesidades y definimos los objetivos del proyecto.</p>
           </div>
-          <div className="paso">
-            <h3>2. Diseño y Prototipado</h3>
+          <div className="puzzle-piece top-right">
+            <h3>2. Diseño y prototipo</h3>
             <p>Presentamos un diseño inicial para tu aprobación antes del desarrollo.</p>
           </div>
-          <div className="paso">
+          <div className="puzzle-piece bottom-left">
             <h3>3. Desarrollo e Implementación</h3>
             <p>Programamos y optimizamos el sistema con las mejores prácticas.</p>
           </div>
-          <div className="paso">
-            <h3>4. Pruebas y Lanzamiento</h3>
+          <div className="puzzle-piece bottom-right">
+            <h3>4. Pruebas y lanzamiento</h3>
             <p>Realizamos pruebas exhaustivas para asegurar la calidad del producto.</p>
           </div>
         </div>

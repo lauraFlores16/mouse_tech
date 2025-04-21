@@ -3,37 +3,66 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f9f9f9;
+  background: linear-gradient(to bottom, #1a1a2e, #16213e, #0f3460);
+  background-attachment: fixed;
+  min-height: 100vh;
 }
 
-/* CONTENEDOR PRINCIPAL */
+/* CONTENEDOR PRINCIPAL - MODIFICADO PARA OCUPAR TODA LA PÁGINA */
 .home {
-  margin-top: 80px; /* Evita que el contenido se solape con el encabezado */
-  padding: 60px 10%;
+  margin-top: 0; /* Eliminado el margen superior */
+  padding: 0; /* Eliminado el padding */
   text-align: center;
+  background-color: rgba(102, 170, 170, 0.705);
+  border-radius: 0; /* Eliminado el border-radius */
+  margin: 0 auto; /* Centrado pero sin márgenes verticales */
+  max-width: 100%; /* Ocupa el 100% del ancho */
+  box-shadow: 0 10px 30px rgba(26, 30, 53, 0.3);
 }
 
-/* SECCIÓN HERO */
+/* SECCIÓN HERO - MODIFICADA */
 .hero {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #eaf6ff;
+  background-color: #f5f9ff;
   padding: 60px 10%;
   flex-wrap: wrap;
-  border-radius: 10px;
+  border-radius: 0; /* Eliminado el border-radius */
   gap: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../assets/imagen/fondo.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.35;
+  z-index: 0;
+  filter: brightness(1.1) contrast(1.1);
 }
 
 .hero-content {
   flex: 1;
   text-align: left;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-content h1 {
   font-size: 40px;
   color: #002b5b;
   margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(255,255,255,0.5); /* Sombra para texto */
 }
 
 .hero-content p {
@@ -41,6 +70,7 @@ body {
   color: #333;
   margin-bottom: 30px;
   max-width: 500px;
+  text-shadow: 1px 1px 1px rgba(255,255,255,0.5); /* Sombra para texto */
 }
 
 .hero-image {
@@ -48,20 +78,16 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
-/*.hero-image img {
-  max-width: 300px;
-  height: auto;
-  object-fit: contain;
-}*/
 .hero-image img {
   width: 60%;
   max-width: 350px;
   height: auto;
   object-fit: contain;
 }
-
 
 /* BOTÓN MEJORADO */
 .boton-servicios {
@@ -70,14 +96,21 @@ body {
   font-size: 18px;
   color: white;
   background: linear-gradient(135deg, #252470, #5f4c80);
-
   border: none;
   border-radius: 30px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
   text-decoration: none;
+  position: relative;
+  z-index: 1;
 }
-/*MISION Y VISION*/
+
+.boton-servicios:hover {
+  background: linear-gradient(135deg, #005b99, #0088cc);
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
 /* SECCIÓN MISIÓN Y VISIÓN */
 .mision-vision {
   padding: 80px 10%;
@@ -97,6 +130,42 @@ body {
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Fondo para MISIÓN */
+.mision-vision .mision::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../assets/imagen/mision.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.25;
+  z-index: 0;
+  filter: brightness(1.2) sepia(0.1);
+}
+
+/* Fondo para VISIÓN */
+.mision-vision .vision::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../assets/imagen/vision.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.25;
+  z-index: 0;
+  filter: brightness(1.2) sepia(0.1);
 }
 
 .mision-vision h2 {
@@ -104,6 +173,8 @@ body {
   color: #002b5b;
   margin-bottom: 15px;
   text-transform: uppercase;
+  position: relative;
+  z-index: 1;
 }
 
 .mision-vision p {
@@ -111,68 +182,192 @@ body {
   color: #333;
   line-height: 1.6;
   text-align: justify;
+  position: relative;
+  z-index: 1;
 }
 
-@media (max-width: 768px) {
-  .mision-vision {
-    flex-direction: column;
-    padding: 60px 5%;
-  }
-}
-
-
-.boton-servicios:hover {
-  background: linear-gradient(135deg, #005b99, #0088cc);
-  transform: scale(1.05);
-  cursor: pointer;
-}
-
-/* SECCIÓN: ¿POR QUÉ ELEGIR MOUSE TECH? */
+/* SECCIÓN: ¿POR QUÉ ELEGIR MOUSE TECH? - VERSIÓN INTERACTIVA */
 .por-que-elegir {
-  background-color: #ffffff;
+  background-color: #ffffff; /* Cambiado a fondo blanco */
   padding: 80px 10%;
+  position: relative;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
 }
 
 .por-que-elegir h2 {
   font-size: 36px;
-  color: #002b5b;
+  color: #002b5b; /* Color azul oscuro para el título */
   margin-bottom: 40px;
   text-transform: uppercase;
+  text-align: center; /* Centrado como en la imagen 1 */
 }
 
-.razones-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  justify-content: center;
+/* Contenedor principal dividido en dos secciones */
+.razones-contenedor {
+  display: flex;
+  gap: 30px;
+  flex: 1;
 }
 
-.razon {
-  background: #002b5b;
-  color: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+/* Panel izquierdo con opciones */
+.razones-menu {
+  flex: 0 0 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Estilo para cada opción del menú */
+.razon-opcion {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 18px 15px;
+  border-left: 4px solid transparent;
+  cursor: pointer;
+  color: #333333; /* Cambiado a negro para mejor legibilidad en fondo blanco */
   transition: all 0.3s ease;
 }
 
-.razon h3 {
+.razon-opcion:hover, .razon-opcion.activa {
+  background-color: rgba(0, 0, 0, 0.05); /* Fondo gris claro al pasar el cursor */
+  border-left: 4px solid #10d876; /* Verde similar al de la imagen */
+}
+
+/* Ícono para cada opción (círculos numerados verdes) */
+.razon-opcion .icono {
+  width: 40px;
+  height: 40px;
+  background-color: #10d876; /* Color verde para los iconos */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff; /* Números en blanco */
   font-size: 20px;
-  margin-bottom: 10px;
+  font-weight: bold;
 }
 
-.razon p {
+/* Título de cada opción */
+.razon-opcion h3 {
+  font-size: 18px;
+  margin: 0;
+  color: #222222; /* Negro para mejor legibilidad */
+}
+
+/* Panel derecho que muestra el contenido - MODIFICADO PARA QUE SEA BLANCO */
+.razones-contenido {
+  flex: 0 0 60%;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff; /* Cambiado a blanco puro */
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Clases para cada panel de contenido */
+.razon-detalle {
+  display: none;
+  flex-direction: column;
+  padding: 30px;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.razon-detalle.activo {
+  display: flex;
+  opacity: 1;
+}
+
+.razon-detalle h4 {
+  font-size: 24px;
+  color: #002b5b; /* Azul oscuro para el título */
+  margin-bottom: 15px;
+  /* MODIFICADO: Mover texto hacia arriba */
+  margin-top: -10px;
+}
+
+.razon-detalle p {
   font-size: 16px;
-  line-height: 1.5;
+  color: #333333; /* Negro para la descripción */
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
-.razon:hover {
-  background: linear-gradient(135deg, #322197, #054a5f, #1f85a4 );
-  transform: translateY(-5px);
-  cursor: pointer;
+.razon-imagen {
+  width: 100%;
+  /* MODIFICADO: Imagen más grande */
+  height: 300px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: auto;
 }
 
-/* SECCIÓN: METODOLOGÍA DE TRABAJO */
+/* Imágenes específicas para cada razón */
+.razon-imagen.desarrollo {
+  background-image: url('../assets/imagen/desarrollo_a_medida.png');
+}
+
+.razon-imagen.entrega {
+  background-image: url('../assets/imagen/entrega_rapida.png');
+}
+
+.razon-imagen.innovacion {
+  background-image: url('../assets/imagen/innovacion_tecnologica.png');
+}
+
+.razon-imagen.soporte {
+  background-image: url('../assets/imagen/soporte_continuo.png');
+}
+
+.razon-imagen.experiencia {
+  background-image: url('../assets/imagen/experiencia_comprobada.png');
+}
+
+/* Estilo especial para la opción activa */
+.razon-opcion.activa {
+  background-color: rgba(16, 216, 118, 0.1); /* Fondo verde muy claro */
+  border-left: 4px solid #10d876;
+}
+
+.razon-opcion.activa h3 {
+  font-weight: bold;
+}
+
+/* Estilos responsivos */
+@media (max-width: 992px) {
+  .razones-contenedor {
+    flex-direction: column;
+  }
+  
+  .razones-menu, .razones-contenido {
+    flex: 1 1 100%;
+  }
+  
+  .razon-detalle {
+    position: relative;
+    height: auto;
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .por-que-elegir {
+    padding: 60px 5%;
+  }
+}
+/* SECCIÓN: METODOLOGÍA DE TRABAJO - MODIFICADA PARA PIEZAS DE ROMPECABEZAS */
 .metodologia {
   background-color: #f4f9ff;
   padding: 80px 10%;
@@ -185,41 +380,206 @@ body {
   text-transform: uppercase;
 }
 
-.pasos {
+/* Nuevo contenedor para el rompecabezas */
+.puzzle-container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 4px;
+  padding: 10px;
+  background-color: #f4f9ff;
+  border-radius: 5px;
+}
+
+/* Estilos para cada pieza del rompecabezas */
+.puzzle-piece {
+  position: relative;
+  padding: 30px;
+  height: 200px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.paso {
-  background: white;
-  padding: 20px;
+  align-items: center;
+  text-align: center;
   border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  width: 250px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
+  overflow: visible;
 }
 
-.paso h3 {
-  color: #0088cc;
-  font-size: 20px;
-  margin-bottom: 10px;
+/* Colores específicos para cada pieza */
+.puzzle-piece.top-left {
+  background-color: #FFCC00; /* Amarillo */
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  z-index: 2;
 }
 
-.paso p {
+.puzzle-piece.top-right {
+  background-color: #99CC00; /* Verde */
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
+  z-index: 1;
+}
+
+.puzzle-piece.bottom-left {
+  background-color: #FF5050; /* Rojo */
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
+  z-index: 1;
+}
+
+.puzzle-piece.bottom-right {
+  background-color: #3399FF; /* Azul */
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  z-index: 2;
+}
+
+/* CONEXIONES MEJORADAS DE ROMPECABEZAS */
+/* Conexión horizontal entre top-left y top-right */
+.puzzle-piece.top-left::after {
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  width: 20px;
+  height: 40px;
+  background-color: #FFCC00;
+  border-radius: 0 20px 20px 0;
+  transform: translateY(-50%);
+  z-index: 3;
+}
+
+.puzzle-piece.top-right::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  width: 20px;
+  height: 40px;
+  background-color: #99CC00;
+  border-radius: 20px 0 0 20px;
+  transform: translateY(-50%);
+  z-index: 0; /* Pasa por detrás para simular que es un hueco */
+  box-shadow: inset 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Conexión vertical entre top-left y bottom-left */
+.puzzle-piece.top-left::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 40px;
+  height: 20px;
+  background-color: #FFCC00;
+  border-radius: 0 0 20px 20px;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.puzzle-piece.bottom-left::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 40px;
+  height: 20px;
+  background-color: #FF5050;
+  border-radius: 20px 20px 0 0;
+  transform: translateX(-50%);
+  z-index: 0; /* Pasa por detrás para simular que es un hueco */
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Conexión horizontal entre bottom-left y bottom-right */
+.puzzle-piece.bottom-left::after {
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  width: 20px;
+  height: 40px;
+  background-color: #FF5050;
+  border-radius: 0 20px 20px 0;
+  transform: translateY(-50%);
+  z-index: 3;
+}
+
+.puzzle-piece.bottom-right::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  width: 20px;
+  height: 40px;
+  background-color: #3399FF;
+  border-radius: 20px 0 0 20px;
+  transform: translateY(-50%);
+  z-index: 0; /* Pasa por detrás para simular que es un hueco */
+  box-shadow: inset 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Conexión vertical entre top-right y bottom-right */
+.puzzle-piece.top-right::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  right: 50%;
+  width: 40px;
+  height: 20px;
+  background-color: #99CC00;
+  border-radius: 0 0 20px 20px;
+  transform: translateX(50%);
+  z-index: 3;
+}
+
+.puzzle-piece.bottom-right::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: 50%;
+  width: 40px;
+  height: 20px;
+  background-color: #3399FF;
+  border-radius: 20px 20px 0 0;
+  transform: translateX(50%);
+  z-index: 0; /* Pasa por detrás para simular que es un hueco */
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenido de las piezas */
+.puzzle-piece h3 {
+  color: #333;
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  position: relative;
+  z-index: 4;
+}
+
+.puzzle-piece p {
   font-size: 16px;
-  line-height: 1.5;
+  color: #333;
+  position: relative;
+  z-index: 4;
+  max-width: 90%;
 }
 
-.paso:hover {
-  transform: translateY(-5px);
+.puzzle-piece:hover {
+  transform: scale(1.03);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* RESPONSIVE */
+/* ESTILOS RESPONSIVOS */
 @media (max-width: 768px) {
   .home {
-    padding: 40px 5%;
+    padding: 0; /* Eliminado el padding para dispositivos móviles */
+    margin: 0 auto; /* Eliminados los márgenes verticales */
+    max-width: 100%; /* Mantiene el 100% del ancho */
   }
 
   .hero {
@@ -236,6 +596,11 @@ body {
     margin-bottom: 30px;
   }
 
+  .mision-vision {
+    flex-direction: column;
+    padding: 60px 5%;
+  }
+
   .por-que-elegir,
   .metodologia {
     padding: 60px 5%;
@@ -245,8 +610,22 @@ body {
     grid-template-columns: 1fr;
   }
 
-  .pasos {
-    flex-direction: column;
-    align-items: center;
+  /* Ajustes para el rompecabezas en dispositivos móviles */
+  .puzzle-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    gap: 20px;
+  }
+
+  .puzzle-piece {
+    height: auto;
+    min-height: 180px;
+    border-radius: 10px !important;
+  }
+
+  /* Eliminamos los conectores en móvil */
+  .puzzle-piece::before,
+  .puzzle-piece::after {
+    display: none;
   }
 }
