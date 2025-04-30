@@ -33,7 +33,7 @@ const Servicios = () => {
         <div className="servicios-texto">
           <h1>ALISPORT</h1>
           <p>
-            En <strong>Alis Sport</strong> ofrecemos una plataforma innovadora para la personalización de ropa deportiva. 
+            En <strong>Alis Sport</strong> ofrecemos una plataforma innovadora para la personalización de prendas deportiva. 
             Diseña tu equipación con las mejores herramientas y crea un estilo único para tu equipo.
           </p>
           <a
@@ -54,8 +54,8 @@ const Servicios = () => {
       <section className="disenos-poleras-fullwidth">
         <div className="poleras-content">
           <div className="poleras-texto">
-            <h2>LOS MEJORES<br />DISEÑOS DE<br />POLERAS</h2>
-            <p>Las polerass mas facheras del mercado<br />encontralas con nosotros</p>
+            <h2>LOS MEJORES<br />DISEÑOS DE<br />PRENDAS DEPORTIVAS</h2>
+            <p>Las prendas deportivas persanalizadas mas facheras del mercado<br />encontralas con nosotros</p>
           </div>
           <div className="poleras-imagen">
             <img src={alisImage} alt="Diseños de poleras" />
