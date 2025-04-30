@@ -1,5 +1,5 @@
 .footer {
-  background-color: #1f3a53;  /* Cambiado a azul grisáceo como en la imagen */
+  background-color: #80b8ed;  /* Cambiado a azul grisáceo como en la imagen */
   color: #f9fafb;
   padding: 25px 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -117,6 +117,13 @@
 .footer-politicas a:hover {
   color: #00e1c5;
 }
+.footer-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
 
 /* Media queries */
 @media (max-width: 768px) {
