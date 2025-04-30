@@ -1,7 +1,7 @@
 .footer {
-  background-color: #111827;
+  background-color: #1f3a53;  /* Cambiado a azul grisáceo como en la imagen */
   color: #f9fafb;
-  padding: 25px 20px; /* Reducido de 40px a 25px */
+  padding: 25px 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -19,63 +19,124 @@
   margin-bottom: 10px;
 }
 
-
 .footer-logo p {
   font-size: 13px;
   color: #9ca3af;
 }
 
-.footer-links,
-.footer-contacto {
+/* Nueva sección para CONTACTANOS */
+.footer-contactanos,
+.footer-servicios,
+.footer-nosotros,
+.footer-siguenos {
   flex: 1;
-  margin: 10px 0;
-  min-width: 250px;
+  margin: 10px 20px;
+  min-width: 200px;
 }
 
-.footer-links h4,
-.footer-contacto h4 {
-  margin-bottom: 12px;
+.footer-contactanos h4,
+.footer-servicios h4,
+.footer-nosotros h4,
+.footer-siguenos h4 {
+  margin-bottom: 15px;
   font-size: 16px;
-  color: #facc15;
+  color: #00e1c5; /* Color turquesa como en la imagen */
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
-.footer-links li {
-  margin-bottom: 8px;
+/* Estilos para las listas */
+.footer-servicios ul,
+.footer-nosotros ul,
+.footer-siguenos ul,
+.footer-contactanos ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.footer-links a,
-.footer-contacto a {
+.footer-servicios li,
+.footer-nosotros li,
+.footer-siguenos li,
+.footer-contactanos li {
+  margin-bottom: 10px;
+}
+
+/* Enlaces y texto */
+.footer-servicios a,
+.footer-nosotros a,
+.footer-siguenos a,
+.footer-contactanos a,
+.footer-contactanos p {
+  color: #f9fafb;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-servicios a:hover,
+.footer-nosotros a:hover,
+.footer-siguenos a:hover,
+.footer-contactanos a:hover {
+  color: #00e1c5;
+}
+
+/* Iconos */
+.footer-contactanos i,
+.footer-nosotros i,
+.footer-siguenos i {
+  margin-right: 10px;
+  color: #00e1c5;
+  font-size: 16px;
+}
+
+/* Sección de políticas */
+.footer-politicas {
+  flex: 1;
+  margin: 10px 20px;
+  min-width: 200px;
+}
+
+.footer-politicas h4 {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #00e1c5;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.footer-politicas a {
   color: #f9fafb;
   text-decoration: none;
   transition: color 0.3s;
   font-size: 14px;
 }
 
-.footer-links a:hover,
-.footer-contacto a:hover {
-  color: #facc15;
-  text-decoration: underline;
+.footer-politicas a:hover {
+  color: #00e1c5;
 }
 
-.footer-contacto p {
-  margin: 6px 0;
-  font-size: 13px;
-}
-
-.footer-contacto i {
-  margin-right: 6px;
-  color: #facc15;
-}
-
+/* Media queries */
 @media (max-width: 768px) {
   .footer-content {
     flex-direction: column;
     text-align: center;
   }
 
-  .footer-logo,
-  .footer-links,
-  .footer-contacto {
+  .footer-contactanos,
+  .footer-servicios,
+  .footer-nosotros,
+  .footer-siguenos,
+  .footer-politicas {
     margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  .footer-contactanos a,
+  .footer-nosotros a,
+  .footer-siguenos a {
+    justify-content: center;
   }
 }

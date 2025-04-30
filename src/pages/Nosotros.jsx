@@ -1,6 +1,8 @@
 import "../styles/Nosotros.css";
 import jos from "../assets/Jos.png";
-
+import lau from "../assets/Lau.png";
+import eric from "../assets/Eric.png";
+import derix from "../assets/Derix.png";
 
 const Nosotros = () => {
   return (
@@ -18,19 +20,19 @@ const Nosotros = () => {
         </div>
 
         <div className="miembro">
-          <img src="/assets/lau.png" alt="Laura" />
+          <img src={lau} alt="Laura" />
           <h3>Laura Flores</h3>
           <p>CTO & Especialista en Sistemas. Encargada de la arquitectura técnica y rendimiento de nuestras plataformas.</p>
         </div>
 
         <div className="miembro">
-          <img src="/imagenes/eric.png" alt="Eric" />
+          <img src={eric} alt="Eric" />
           <h3>Eric Apaza</h3>
           <p>Diseñadora UX/UI. Apasionado por crear experiencias visuales intuitivas, atractivas y funcionales.</p>
         </div>
 
         <div className="miembro">
-          <img src="/imagenes/derix.png" alt="Derix" />
+          <img src={derix} alt="Derix" />
           <h3>Derix Venegas</h3>
           <p>Marketing Digital. Especialista en estrategia, posicionamiento y comunicación efectiva con nuestros clientes.</p>
         </div>

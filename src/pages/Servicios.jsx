@@ -4,6 +4,7 @@ import logsportImage from "./../assets/LOGSPORT.png";
 import tiendaRotarPrimero from "./../assets/imagen/tienda_rotar_primero.png";
 import tiendaRotarSegundo from "./../assets/imagen/tienda_rotar_segundo.png";
 import tiendaRotarTercero from "./../assets/imagen/tienda_rotar_tercero.png";
+import alisImage from "./../assets/imagen/alis.png";
 
 const Servicios = () => {
   const [currentBgIndex, setCurrentBgIndex] = useState(0);
@@ -49,13 +50,17 @@ const Servicios = () => {
         </div>
       </section>
 
-      {/* Sección de proyectos a futuro */}
-      <section className="proyectos-futuros">
-        <h2>Proyectos a Futuro</h2>
-        <p>
-          Expansión a más deportes, nuevas tecnologías en personalización y experiencias inmersivas en 3D. 
-          Nuestro objetivo es ofrecerte lo mejor en diseño deportivo digital.
-        </p>
+      {/* Sección de poleras a ancho completo */}
+      <section className="disenos-poleras-fullwidth">
+        <div className="poleras-content">
+          <div className="poleras-texto">
+            <h2>LOS MEJORES<br />DISEÑOS DE<br />POLERAS</h2>
+            <p>Las polerass mas facheras del mercado<br />encontralas con nosotros</p>
+          </div>
+          <div className="poleras-imagen">
+            <img src={alisImage} alt="Diseños de poleras" />
+          </div>
+        </div>
       </section>
     </div>
   );
