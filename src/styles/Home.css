@@ -402,162 +402,135 @@ body {
 }
 
 /* Estilos para cada pieza del rompecabezas */
+/* --- PIEZAS DEL ROMPECABEZAS CON FORMA Y ANIMACIÓN --- */
 .puzzle-piece {
   position: relative;
   padding: 30px;
-  height: 200px;
+  height: 220px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  overflow: visible;
+  border-radius: 25px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeZoomIn 0.8s ease forwards;
+  transform: scale(0.95);
 }
+
+
 
 /* Colores específicos para cada pieza */
+/* Top Left */
+/* TOP LEFT */
 .puzzle-piece.top-left {
-  background-color: #FFCC00; /* Amarillo */
-  border-top-right-radius: 0;
-  border-bottom-left-radius: 0;
-  z-index: 2;
+  background-color: #FFCC00;
+  border-radius: 60px 0 0 0;
+  clip-path: none;
 }
 
+/* TOP RIGHT */
 .puzzle-piece.top-right {
-  background-color: #99CC00; /* Verde */
-  border-top-left-radius: 0;
-  border-bottom-right-radius: 0;
-  z-index: 1;
+  background-color: #99CC00;
+  border-radius: 0 60px 0 0;
+  clip-path: none;
 }
 
+/* BOTTOM LEFT */
 .puzzle-piece.bottom-left {
-  background-color: #FF5050; /* Rojo */
-  border-top-left-radius: 0;
-  border-bottom-right-radius: 0;
-  z-index: 1;
+  background-color: #FF5050;
+  border-radius: 0 0 0 60px;
+  clip-path: none;
 }
 
+/* BOTTOM RIGHT */
 .puzzle-piece.bottom-right {
-  background-color: #3399FF; /* Azul */
-  border-top-right-radius: 0;
-  border-bottom-left-radius: 0;
-  z-index: 2;
+  background-color: #3399FF;
+  border-radius: 0 0 60px 0;
+  clip-path: none;
 }
+
+
 
 /* CONEXIONES MEJORADAS DE ROMPECABEZAS */
 /* Conexión horizontal entre top-left y top-right */
+
+/* ONDAS ENTRE PIEZAS - MÁS CURVAS Y VISUALES */
+.puzzle-piece::before,
+.puzzle-piece::after {
+  content: "";
+  position: absolute;
+  background-color: inherit;
+  border-radius: 50%;
+  z-index: 1;
+  box-shadow: inset 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* Pieza superior izquierda */
 .puzzle-piece.top-left::after {
-  content: "";
-  position: absolute;
-  right: -10px;
+  right: -15px;
   top: 50%;
-  width: 20px;
-  height: 40px;
-  background-color: #FFCC00;
-  border-radius: 0 20px 20px 0;
+  width: 30px;
+  height: 60px;
   transform: translateY(-50%);
-  z-index: 3;
 }
-
-.puzzle-piece.top-right::before {
-  content: "";
-  position: absolute;
-  left: -10px;
-  top: 50%;
-  width: 20px;
-  height: 40px;
-  background-color: #99CC00;
-  border-radius: 20px 0 0 20px;
-  transform: translateY(-50%);
-  z-index: 0; /* Pasa por detrás para simular que es un hueco */
-  box-shadow: inset 2px 0 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Conexión vertical entre top-left y bottom-left */
 .puzzle-piece.top-left::before {
-  content: "";
-  position: absolute;
-  bottom: -10px;
+  bottom: -15px;
   left: 50%;
-  width: 40px;
-  height: 20px;
-  background-color: #FFCC00;
-  border-radius: 0 0 20px 20px;
+  width: 60px;
+  height: 30px;
   transform: translateX(-50%);
-  z-index: 3;
 }
 
-.puzzle-piece.bottom-left::before {
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: 50%;
-  width: 40px;
-  height: 20px;
-  background-color: #FF5050;
-  border-radius: 20px 20px 0 0;
-  transform: translateX(-50%);
-  z-index: 0; /* Pasa por detrás para simular que es un hueco */
-  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Conexión horizontal entre bottom-left y bottom-right */
-.puzzle-piece.bottom-left::after {
-  content: "";
-  position: absolute;
-  right: -10px;
-  top: 50%;
-  width: 20px;
-  height: 40px;
-  background-color: #FF5050;
-  border-radius: 0 20px 20px 0;
-  transform: translateY(-50%);
-  z-index: 3;
-}
-
-.puzzle-piece.bottom-right::before {
-  content: "";
-  position: absolute;
-  left: -10px;
-  top: 50%;
-  width: 20px;
-  height: 40px;
-  background-color: #3399FF;
-  border-radius: 20px 0 0 20px;
-  transform: translateY(-50%);
-  z-index: 0; /* Pasa por detrás para simular que es un hueco */
-  box-shadow: inset 2px 0 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Conexión vertical entre top-right y bottom-right */
+/* Pieza superior derecha */
 .puzzle-piece.top-right::after {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  right: 50%;
-  width: 40px;
-  height: 20px;
-  background-color: #99CC00;
-  border-radius: 0 0 20px 20px;
-  transform: translateX(50%);
-  z-index: 3;
+  left: -15px;
+  top: 50%;
+  width: 30px;
+  height: 60px;
+  transform: translateY(-50%);
+}
+.puzzle-piece.top-right::before {
+  bottom: -15px;
+  left: 50%;
+  width: 60px;
+  height: 30px;
+  transform: translateX(-50%);
 }
 
-.puzzle-piece.bottom-right::after {
-  content: "";
-  position: absolute;
-  top: -10px;
-  right: 50%;
-  width: 40px;
-  height: 20px;
-  background-color: #3399FF;
-  border-radius: 20px 20px 0 0;
-  transform: translateX(50%);
-  z-index: 0; /* Pasa por detrás para simular que es un hueco */
-  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+/* Pieza inferior izquierda */
+.puzzle-piece.bottom-left::after {
+  right: -15px;
+  top: 50%;
+  width: 30px;
+  height: 60px;
+  transform: translateY(-50%);
 }
+.puzzle-piece.bottom-left::before {
+  top: -15px;
+  left: 50%;
+  width: 60px;
+  height: 30px;
+  transform: translateX(-50%);
+}
+
+/* Pieza inferior derecha */
+.puzzle-piece.bottom-right::after {
+  left: -15px;
+  top: 50%;
+  width: 30px;
+  height: 60px;
+  transform: translateY(-50%);
+}
+.puzzle-piece.bottom-right::before {
+  top: -15px;
+  left: 50%;
+  width: 60px;
+  height: 30px;
+  transform: translateX(-50%);
+}
+
 
 /* Contenido de las piezas */
 .puzzle-piece h3 {
@@ -626,9 +599,21 @@ body {
   }
 
   .puzzle-piece {
-    height: auto;
-    min-height: 180px;
-    border-radius: 10px !important;
+    .puzzle-piece {
+      width: 100%;
+      height: 220px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #333;
+      position: relative;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+    
   }
 
   /* Eliminamos los conectores en móvil */
@@ -636,4 +621,15 @@ body {
   .puzzle-piece::after {
     display: none;
   }
+  @keyframes fadeZoomIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
 }
