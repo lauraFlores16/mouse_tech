@@ -116,28 +116,38 @@ const Home = () => {
         </div>
       </section>
 
-      {/* SECCIÓN METODOLOGÍA DE TRABAJO */}
+      {/* SECCIÓN METODOLOGÍA DE TRABAJO - ACTUALIZADA */}
       <section className="metodologia">
         <h2>Nuestra Metodología de Trabajo</h2>
         <div className="puzzle-container">
-          <div className="puzzle-piece top-left">
+          
+          <div className="puzzle-piece amarillo">
             <h3>1. Análisis de requisitos</h3>
             <p>Evaluamos tus necesidades y definimos los objetivos del proyecto.</p>
+            <div className="conector-horizontal"></div>
+            <div className="conector-vertical"></div>
           </div>
-          <div className="puzzle-piece top-right">
+          
+          <div className="puzzle-piece verde">
             <h3>2. Diseño y prototipo</h3>
             <p>Presentamos un diseño inicial para tu aprobación antes del desarrollo.</p>
+            <div className="conector-vertical"></div>
           </div>
-          <div className="puzzle-piece bottom-left">
+          
+          <div className="puzzle-piece rojo">
             <h3>3. Desarrollo e Implementación</h3>
             <p>Programamos y optimizamos el sistema con las mejores prácticas.</p>
+            <div className="conector-horizontal"></div>
           </div>
-          <div className="puzzle-piece bottom-right">
+          
+          <div className="puzzle-piece azul">
             <h3>4. Pruebas y lanzamiento</h3>
             <p>Realizamos pruebas exhaustivas para asegurar la calidad del producto.</p>
           </div>
+
         </div>
       </section>
+
     </div>
   );
 };

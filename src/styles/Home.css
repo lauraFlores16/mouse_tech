@@ -353,29 +353,7 @@ body {
   font-weight: bold;
 }
 
-/* Estilos responsivos */
-@media (max-width: 992px) {
-  .razones-contenedor {
-    flex-direction: column;
-  }
-  
-  .razones-menu, .razones-contenido {
-    flex: 1 1 100%;
-  }
-  
-  .razon-detalle {
-    position: relative;
-    height: auto;
-    min-height: 300px;
-  }
-}
-
-@media (max-width: 768px) {
-  .por-que-elegir {
-    padding: 60px 5%;
-  }
-}
-/* SECCIÓN: METODOLOGÍA DE TRABAJO - MODIFICADA PARA PIEZAS DE ROMPECABEZAS */
+/* SECCIÓN: METODOLOGÍA DE TRABAJO - NUEVOS ESTILOS SEGÚN IMAGEN */
 .metodologia {
   background-color: #f4f9ff;
   padding: 80px 10%;
@@ -384,252 +362,138 @@ body {
 .metodologia h2 {
   font-size: 36px;
   color: #002b5b;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
   text-transform: uppercase;
+  text-align: center;
 }
 
-/* Nuevo contenedor para el rompecabezas */
+/* Contenedor del rompecabezas - ACTUALIZADO */
 .puzzle-container {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  gap: 4px;
-  padding: 10px;
-  background-color: #f4f9ff;
-  border-radius: 5px;
+  gap: 20px;
+  position: relative;
 }
 
-/* Estilos para cada pieza del rompecabezas */
-/* --- PIEZAS DEL ROMPECABEZAS CON FORMA Y ANIMACIÓN --- */
+/* Estilos para cada pieza del rompecabezas - ACTUALIZADO */
 .puzzle-piece {
-  position: relative;
   padding: 30px;
-  height: 220px;
+  height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  border-radius: 25px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: fadeZoomIn 0.8s ease forwards;
-  transform: scale(0.95);
-}
-
-
-
-/* Colores específicos para cada pieza */
-/* Top Left */
-/* TOP LEFT */
-.puzzle-piece.top-left {
-  background-color: #FFCC00;
-  border-radius: 60px 0 0 0;
-  clip-path: none;
-}
-
-/* TOP RIGHT */
-.puzzle-piece.top-right {
-  background-color: #99CC00;
-  border-radius: 0 60px 0 0;
-  clip-path: none;
-}
-
-/* BOTTOM LEFT */
-.puzzle-piece.bottom-left {
-  background-color: #FF5050;
-  border-radius: 0 0 0 60px;
-  clip-path: none;
-}
-
-/* BOTTOM RIGHT */
-.puzzle-piece.bottom-right {
-  background-color: #3399FF;
-  border-radius: 0 0 60px 0;
-  clip-path: none;
-}
-
-
-
-/* CONEXIONES MEJORADAS DE ROMPECABEZAS */
-/* Conexión horizontal entre top-left y top-right */
-
-/* ONDAS ENTRE PIEZAS - MÁS CURVAS Y VISUALES */
-.puzzle-piece::before,
-.puzzle-piece::after {
-  content: "";
-  position: absolute;
-  background-color: inherit;
-  border-radius: 50%;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  position: relative;
   z-index: 1;
-  box-shadow: inset 0 2px 8px rgba(0,0,0,0.2);
 }
 
-/* Pieza superior izquierda */
-.puzzle-piece.top-left::after {
-  right: -15px;
-  top: 50%;
-  width: 30px;
-  height: 60px;
-  transform: translateY(-50%);
-}
-.puzzle-piece.top-left::before {
-  bottom: -15px;
-  left: 50%;
-  width: 60px;
-  height: 30px;
-  transform: translateX(-50%);
+/* Colores específicos para cada pieza - ACTUALIZADO */
+.puzzle-piece.amarillo {
+  background-color: #FFCC00; /* Amarillo */
 }
 
-/* Pieza superior derecha */
-.puzzle-piece.top-right::after {
-  left: -15px;
-  top: 50%;
-  width: 30px;
-  height: 60px;
-  transform: translateY(-50%);
-}
-.puzzle-piece.top-right::before {
-  bottom: -15px;
-  left: 50%;
-  width: 60px;
-  height: 30px;
-  transform: translateX(-50%);
+.puzzle-piece.verde {
+  background-color: #99CC00; /* Verde */
 }
 
-/* Pieza inferior izquierda */
-.puzzle-piece.bottom-left::after {
-  right: -15px;
-  top: 50%;
-  width: 30px;
-  height: 60px;
-  transform: translateY(-50%);
-}
-.puzzle-piece.bottom-left::before {
-  top: -15px;
-  left: 50%;
-  width: 60px;
-  height: 30px;
-  transform: translateX(-50%);
+.puzzle-piece.rojo {
+  background-color: #FF5050; /* Rojo */
 }
 
-/* Pieza inferior derecha */
-.puzzle-piece.bottom-right::after {
-  left: -15px;
-  top: 50%;
-  width: 30px;
-  height: 60px;
-  transform: translateY(-50%);
+.puzzle-piece.azul {
+  background-color: #3399FF; /* Azul */
 }
-.puzzle-piece.bottom-right::before {
-  top: -15px;
-  left: 50%;
-  width: 60px;
-  height: 30px;
-  transform: translateX(-50%);
-}
-
 
 /* Contenido de las piezas */
 .puzzle-piece h3 {
   color: #333;
-  font-size: 22px;
+  font-size: 20px;
   margin-bottom: 15px;
   font-weight: bold;
   position: relative;
-  z-index: 4;
+  z-index: 3;
 }
 
 .puzzle-piece p {
-  font-size: 16px;
+  font-size: 15px;
   color: #333;
   position: relative;
-  z-index: 4;
+  z-index: 3;
   max-width: 90%;
+  margin: 0 auto;
 }
 
 .puzzle-piece:hover {
-  transform: scale(1.03);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+  z-index: 10;
 }
 
-/* ESTILOS RESPONSIVOS */
+/* Conectores entre piezas - NUEVO */
+.conector-horizontal {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: inherit;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.conector-vertical {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: inherit;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  z-index: 2;
+}
+
+/* Estilos responsivos - ACTUALIZADO */
 @media (max-width: 768px) {
-  .home {
-    padding: 0; /* Eliminado el padding para dispositivos móviles */
-    margin: 0 auto; /* Eliminados los márgenes verticales */
-    max-width: 100%; /* Mantiene el 100% del ancho */
-  }
-
-  .hero {
-    flex-direction: column-reverse;
-    text-align: center;
-  }
-
-  .hero-content {
-    text-align: center;
-  }
-
-  .hero-image {
-    justify-content: center;
-    margin-bottom: 30px;
-  }
-
-  .mision-vision {
-    flex-direction: column;
-    padding: 60px 5%;
-  }
-
-  .por-que-elegir,
-  .metodologia {
-    padding: 60px 5%;
-  }
-
-  .razones-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* Ajustes para el rompecabezas en dispositivos móviles */
   .puzzle-container {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, auto);
-    gap: 20px;
+    gap: 40px;
   }
 
   .puzzle-piece {
-    .puzzle-piece {
-      width: 100%;
-      height: 220px;
-      padding: 30px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: #333;
-      position: relative;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease;
-    }
-    
+    height: auto;
+    min-height: 160px;
   }
 
-  /* Eliminamos los conectores en móvil */
-  .puzzle-piece::before,
-  .puzzle-piece::after {
+  /* Ajustamos los conectores en móvil */
+  .conector-horizontal, .conector-vertical {
     display: none;
   }
-  @keyframes fadeZoomIn {
-    0% {
-      opacity: 0;
-      transform: scale(0.8);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1);
-    }
+  
+  /* Alternativa para móvil: pseudo-conectores simples */
+  .puzzle-piece::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: inherit;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    z-index: 0;
+    display: block;
   }
   
-}
+  /* El último elemento no necesita conector */
+  .puzzle-piece:last-child::after {
+    display: none;
+  }
+} 
