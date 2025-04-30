@@ -55,6 +55,15 @@
   color: #ff7f11;
 }
 
+.nav-link.login-link {
+  color: #ff7f11;
+  font-weight: 600;
+}
+
+.nav-link.login-link:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 768px) {
   .nav-menu {
     flex-direction: column;
