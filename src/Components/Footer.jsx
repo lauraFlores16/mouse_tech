@@ -3,6 +3,7 @@ import logo from "../assets/logo.png";
 import ubicacionIcon from "../assets/imagen/ubicacion.png";
 import correoIcon from "../assets/imagen/correo.png";
 import telefonoIcon from "../assets/imagen/contacto.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -22,9 +23,10 @@ const Footer = () => {
         <div className="footer-links">
           <h4>Enlaces Rápidos</h4>
           <ul>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-            <li><a href="#nosotros">Nosotros</a></li>
+            <li><Link to="/" className="footer-link">Inicio</Link></li>
+            <li><Link to="/servicios" className="footer-link">Servicios</Link></li>
+            <li><Link to="/contacto" className="footer-link">Contacto</Link></li>
+            <li><Link to="/nosotros" className="footer-link">Nosotros</Link></li>
           </ul>
         </div>
 
