@@ -16,7 +16,6 @@ const Footer = () => {
           <p style={{ color: "black" }}>
             &copy; {new Date().getFullYear()} Mouse Tech. Todos los derechos reservados.
           </p>
-
         </div>
 
         {/* Enlaces rápidos */}
@@ -43,11 +42,15 @@ const Footer = () => {
           </p>
           <p>
             <img src={telefonoIcon} alt="Teléfono" className="footer-icon" />
-            <a href="tel:+59173547502">+591 735-47502</a>
+            <a href="https://wa.me/59176526162" target="_blank" rel="noopener noreferrer">
+              +591 76526162
+            </a>
           </p>
           <p>
             <img src={telefonoIcon} alt="Teléfono" className="footer-icon" />
-            <a href="tel:+59168015204">+591 680-15204</a>
+            <a href="https://wa.me/59171589369" target="_blank" rel="noopener noreferrer">
+              +591 71589369
+            </a>
           </p>
         </div>
       </div>
