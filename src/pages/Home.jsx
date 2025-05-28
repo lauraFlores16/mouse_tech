@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "../styles/Home.css";
 import logo from "../assets/logo.png";
+import Chatbot from "../Components/Chatbot"; // Importación del Chatbot
 
 const Home = () => {
   // Estado para manejar la razón activa
@@ -66,6 +67,7 @@ const Home = () => {
           <img src={logo} alt="Logo Mouse Tech" />
         </div>
       </section>
+
       {/* SECCIÓN MISIÓN Y VISIÓN */}
       <section className="mision-vision">
         <div className="mision">
@@ -147,6 +149,9 @@ const Home = () => {
 
         </div>
       </section>
+
+      {/* CHATBOT INTEGRADO (Aparecerá flotante en todas las páginas) */}
+      <Chatbot /> {/* Solo necesitas esta línea */}
 
     </div>
   );

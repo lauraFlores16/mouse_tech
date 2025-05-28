@@ -1,12 +1,13 @@
 import { Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import Navbar from "./Components/Navbar";
+import Footer from "./Components/Footer";
 import Home from "./pages/Home";
 import Servicios from "./pages/Servicios";
 import Proyectos from "./pages/Proyectos";
 import Nosotros from "./pages/Nosotros";
 import Contacto from "./pages/Contacto";
 import Login from "./pages/Login";
+import Chatbot from "./Components/Chatbot"; // Importación del Chatbot
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
         <Route path="/contacto" element={<Contacto />} />
         <Route path="/login" element={<Login />} />
       </Routes>
-      <Footer /> 
+      <Footer />
+      <Chatbot /> {/* Chatbot integrado globalmente */}
     </>
   );
 }
